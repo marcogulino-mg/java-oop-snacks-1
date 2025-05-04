@@ -15,5 +15,9 @@ public class Main {
 
         // ! SNACK 2
 
+        // * Class Instances
+        ContoBancario BankAccount01 = new ContoBancario();
+
+        // * Methods
     }
 }
