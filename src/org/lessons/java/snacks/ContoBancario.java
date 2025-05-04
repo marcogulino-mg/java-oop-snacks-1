@@ -43,4 +43,14 @@ public class ContoBancario {
     public BigDecimal getBalance() {
         return balance;
     }
+
+    // * Setters
+    public void setDeposit(BigDecimal deposit) {
+        this.balance = this.balance.add(deposit);
+    }
+
+    public void setWithdrawal(BigDecimal withdrawal) {
+        this.balance = this.balance.subtract(withdrawal);
+    }
+
 }

@@ -1,5 +1,8 @@
 package org.lessons.java.snacks;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -17,7 +20,16 @@ public class Main {
 
         // * Class Instances
         ContoBancario BankAccount01 = new ContoBancario();
+        BigDecimal deposit = new BigDecimal("200.20").setScale(2, RoundingMode.HALF_UP);
+        BigDecimal withdrawal = new BigDecimal("75.10").setScale(2, RoundingMode.HALF_UP);
 
         // * Methods
+        System.out.println(BankAccount01.getAccountNumber() + " | " + BankAccount01.getBalance());
+        BankAccount01.setDeposit(deposit);
+        System.out.println(BankAccount01.getAccountNumber() + " | " + BankAccount01.getBalance());
+        BankAccount01.setWithdrawal(withdrawal);
+        System.out.println(BankAccount01.getAccountNumber() + " | " + BankAccount01.getBalance());
+
+        // ! SNACK 3
     }
 }
