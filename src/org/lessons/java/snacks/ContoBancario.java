@@ -35,4 +35,12 @@ public class ContoBancario {
         return "IT" + 60 + "A" + randomNumbers();
     }
 
+    // * Getters
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public BigDecimal getBalance() {
+        return balance;
+    }
 }
