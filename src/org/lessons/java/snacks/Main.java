@@ -2,6 +2,7 @@ package org.lessons.java.snacks;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -31,5 +32,8 @@ public class Main {
         System.out.println(BankAccount01.getAccountNumber() + " | " + BankAccount01.getBalance());
 
         // ! SNACK 3
+        RegistroStudenti Class01 = new RegistroStudenti();
+        System.out.println(Arrays.toString(Class01.getStudents()));
+        Class01.setStudents(Student01);
     }
 }
