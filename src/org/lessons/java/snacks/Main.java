@@ -12,6 +12,8 @@ public class Main {
         // * Class Instances
         Studente EmptyStudente = new Studente();
         Studente Student01 = new Studente("Marco", "Gulino", (byte) 26);
+        Studente Student02 = new Studente("Mattia", "Verdi", (byte) 24);
+        Studente Student03 = new Studente("Francesca", "Rossi", (byte) 25);
 
         // * Methods
         System.out.println(EmptyStudente.concatData());
@@ -32,8 +34,18 @@ public class Main {
         System.out.println(BankAccount01.getAccountNumber() + " | " + BankAccount01.getBalance());
 
         // ! SNACK 3
+
+        // * Class Instances
         RegistroStudenti Class01 = new RegistroStudenti();
+
         System.out.println(Arrays.toString(Class01.getStudents()));
         Class01.setStudents(Student01);
+        Class01.setStudents(Student02);
+        Class01.setStudents(Student03);
+
+        // * Methods
+        for (int i = 0; i < Class01.getStudents().length; i++) {
+            System.out.println((Class01.getStudents())[i].concatData());
+        }
     }
 }
