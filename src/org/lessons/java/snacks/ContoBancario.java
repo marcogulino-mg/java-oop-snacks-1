@@ -46,11 +46,15 @@ public class ContoBancario {
 
     // * Setters
     public void setDeposit(BigDecimal deposit) {
-        this.balance = this.balance.add(deposit);
+        if (deposit.compareTo(new BigDecimal(0)) == 1) {
+            this.balance = this.balance.add(deposit);
+        }
     }
 
     public void setWithdrawal(BigDecimal withdrawal) {
-        this.balance = this.balance.subtract(withdrawal);
+        if (withdrawal.compareTo(new BigDecimal(0)) == 1 && this.balance.compareTo(withdrawal) == 1) {
+            this.balance = this.balance.subtract(withdrawal);
+        }
     }
 
 }
