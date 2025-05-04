@@ -22,4 +22,8 @@ public class Studente {
         this.age = age;
     }
 
+    // * Others
+    public String concatData() {
+        return this.name + " " + this.surname + ", " + this.age;
+    }
 }
